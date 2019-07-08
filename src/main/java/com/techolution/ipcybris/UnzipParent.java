@@ -253,20 +253,7 @@ public class UnzipParent {
                         te = tis.getNextTarEntry();
                     }
                     tis.close();
-                }
-                    String path=p.toString();
-                    String[] words = path.split("\\\\");
-                    //  System.out.println(Arrays.toString(words));
-                    // int l=words.length;
-                    // System.out.println(words[4]);
-                    String s1 = words[words.length - 1];       //.split(".");
-                    String[] s2 = s1.split("\\.");
-                    String week = s2[0];
-                    JSONObject jobj = new JSONObject();
-                    jobj.put("destination path", desPath);
-                    jobj.put("week num", week);
-                    c.output(jobj.toString());
-
+                }                    
             }
             catch(Exception e){
                 e.printStackTrace();
