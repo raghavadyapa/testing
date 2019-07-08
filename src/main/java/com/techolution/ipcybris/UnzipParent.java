@@ -222,7 +222,7 @@ public class UnzipParent {
                     ZipInputStream zis = new ZipInputStream(bis);
                     ZipEntry ze = zis.getNextEntry();
                     while (ze != null) {
-                        WritableByteChannel wri = u.create(GcsPath.fromUri(this.destinationLocation.get() + randomStr + "-unzip/" + ze.getName()), getType(ze.getName()));
+                        WritableByteChannel wri = u.create(GcsPath.fromUri(this.destinationLocation.get() + randomStr + "-unzip" + ze.getName()), getType(ze.getName()));
                         OutputStream os = Channels.newOutputStream(wri);
                         int len;
                         while ((len = zis.read(buffer)) > 0) {
