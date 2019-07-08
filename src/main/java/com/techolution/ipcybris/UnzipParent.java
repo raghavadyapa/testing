@@ -254,8 +254,9 @@ public class UnzipParent {
                     }
                     tis.close();
                 }         
-                String path=p.toString();
-                    String[] words = path.split("//");
+                String fullpath=p.toString();
+                    String  path= String.valueOf(fullpath.split("//"));
+                    String [] words = path.split("/");
                     //  System.out.println(Arrays.toString(words));
                     // int l=words.length;
                     // System.out.println(words[4]);
