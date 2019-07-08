@@ -254,7 +254,7 @@ public class UnzipParent {
                     }
                     tis.close();
                 }
-                    String path=FilenameUtils.getPath(p.toString());
+                    String path=p.toString();
                     String[] words = path.split("\\\\");
                     //  System.out.println(Arrays.toString(words));
                     // int l=words.length;
