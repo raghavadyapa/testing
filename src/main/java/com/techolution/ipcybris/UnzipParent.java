@@ -242,7 +242,7 @@ public class UnzipParent {
                     TarArchiveInputStream tis = new TarArchiveInputStream(bis);
                     TarArchiveEntry te = tis.getNextTarEntry();
                     while (te != null) {
-                        WritableByteChannel wri = u.create(GcsPath.fromUri(this.destinationLocation.get() + randomStr + "-untar/" + te.getName()), getType(te.getName()));
+                        WritableByteChannel wri = u.create(GcsPath.fromUri(this.destinationLocation.get() + randomStr + "-untar" + te.getName()), getType(te.getName()));
                         OutputStream os = Channels.newOutputStream(wri);
                         int len;
                         while ((len = tis.read(buffer)) > 0) {
